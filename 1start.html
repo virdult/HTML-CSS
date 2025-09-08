@@ -20,6 +20,7 @@ Go to that link and choose the upload file and check your errors in the code-->
     <h1>Hello Web Designers!</h1><!--There are h1 to h6, changing sizes. The are headers-->
 
     <hr>
+    <br><!-- Line break. You can write multiple by writing br*number -->
 
     <nav>
         <ul>
@@ -111,6 +112,34 @@ Go to that link and choose the upload file and check your errors in the code-->
         <a href="/">Back to Home</a>
     </p>
     -->
+
+    <!-- IMAGE -->
+
+    <!-- alt="" shows if image doesn't load, else doesn't writes in screen -->
+    <!-- title="" shows if you hover on the photo -->
+     <!-- loading="" either eager or lazy, eager by default. Any image that you don't see directly on the loading 
+      of the page, you want to set it to lazy. So browser only loads it when we're getting closer to it.-->
+    <img src="img/cat.jpg" alt="Cat Photo" width="736" height="712">
+
+    <figure>
+        <img src="img/dog.jpg" alt="Dog Photo" title="This is a dog photo" width="400" height="400">
+        <figcaption>
+            Dog Photo <!--This gets shown on the screen below the image-->
+        </figcaption>
+    </figure>
+
+    <p>
+        <img src="img/guts.jpg" alt="Guts Photo" title="This is a Guts photo" width="733" height="224" loading="lazy">
+    </p>
+    
+    <!-- Extra use of <figure> -->
+    <figure>
+        <figcaption>An example of HTML5 code
+        <p>
+            <code>&lt;h1&gt;Hello World&lt;/h1&gt;</code>
+        </p>
+        </figcaption>
+    </figure>
 </body>
 
 </html>
