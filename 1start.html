@@ -17,33 +17,50 @@ Go to that link and choose the upload file and check your errors in the code-->
 </head>
 <!--The things inside body will be seen in our web page-->
 <body>
-    <h1>Hello Web Designers!</h1><!--There are h1 to h6, changing sizes. The are headers-->
+    <h1>Hello Web Designers!</h1><!--There are h1 to h6, changing sizes. The are headings-->
 
     <hr>
     <br><!-- Line break. You can write multiple by writing br*number -->
-
-    <nav>
-        <ul>
-            <li><a href="#Schedule">Daily Schedule</a></li>
-            <li><a href="#Personal">Personal Information</a></li>
-            <li><a href="#Lists">Lists</a></li>
-        </ul>
-    </nav><!--This is again, linking but in the same page, it sends you to the section.-->
+    <header><!--idk why... I guess this is a semantic tag so it's more understandable?-->
+        <nav aria-labelledby="primary-navigation"><!--You put this arialabel thing so if you have a lot of nav's you don't mix which is which-->
+            <h2 id="primary-navigation">Primary Navigation</h2><!--And then you can label these-->
+            <ul>
+                <li><a href="#Schedule">Daily Schedule</a></li>
+                <li><a href="#Personal">Personal Information</a></li>
+                <li><a href="#Lists">Lists</a></li>
+            </ul>
+        </nav><!--This is again, linking but in the same page, it sends you to the section.-->
+    </header>
 
     <hr><!--This is basically a line-->
 
     <h2>Now this is a smaller text than h1!</h2>
-    <p>This is my starting with web dev career.</p><!--and this is a pharagraph place that you write stuff-->
-    <section id = "Schedule">
-        <h3>Daily Schedule Section</h3>
-        <p>Let me tell you how
-            <br>... I learn more about my web dev.<!--This is basically going 1 line below-->
-            <br>... I plan out my schedule.
-            <br><strong>AAAAAAAAAAAAAAAAAAAAAAAAAAA!</strong><!--This makes the text bold.-->
-        </p>
-    </section>
+    <main><!--Again, this is a semantic element. IDK why we put these-->
+        <p>This is my starting with web dev career.</p><!--and this is a pharagraph place that you write stuff-->
+        <section id = "Schedule"> <!--You could use <article> as well instead of section. Both works-->
+            <h3>Daily Schedule Section</h3>
+            <p>Let me tell you how
+                <br>... I learn more about my web dev.<!--This is basically going 1 line below-->
+                <br>... I plan out my schedule.
+                <br><strong>AAAAAAAAAAAAAAAAAAAAAAAAAAA!</strong><!--This makes the text bold.-->
+            </p>
+            <aside><!--side info type of thing I gusss-->
+                <details><!--All these aside, details and summary are semantic tags.-->
+                    <summary><!--Now this makes something extendable I guess. Go check webpage-->
+                        Guess the <mark>numbers of hours</mark> I code per day.<!--Mark makes highlight-->
+                    </summary>
+                    <p><!--And this is the extendable part-->
+                        I start at <time datetime="04:00">4</time> am and code for <time datetime="PT6H"></time>6 hours.
+                        <!--This time thing doesn't change anything in page but it helps for the assistive other 
+                        technologies adding meaning to the code. I guess this is why semantic tags are a thing.-->
+                    </p>
+                </details>
+            </aside>
+        </section>
+    </main>
     <hr>
-    <section id = "Personal">
+    <section id = "Personal"> <!--You could use <article> as well instead of section. Both works-->
+                            <!--Can put sections inside article's btw. Idk if viceversa works-->
         <h3>Personal Information Section</h3>
         <p>My favorite singers and their songs:
             <br>->Ado: <em>  Crime and Punishment, Rule, Kimi no Taion</em> <!--This makes writing italic I guess?-->
@@ -56,8 +73,13 @@ Go to that link and choose the upload file and check your errors in the code-->
         <!--How we make spaces or <, > things in code is shown below-->
         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; This should be typed further</p>
         <hr>
-        &lt;&lt;&lt; &copy; <a href="testStuff.html">Virdult</a> &gt;&gt;&gt;
     </section>
+    <footer><!--Again, a semantic element.-->
+        <p>
+            &lt;&lt;&lt; &copy; <a href="testStuff.html">Virdult</a> &gt;&gt;&gt;
+        </p>
+    </footer>
+
     <hr><!--Above, we call this a relative reference, that references a file in the same file-->
     
     <!--If you have some abbreviations in your page such as MDN, AFK-->
@@ -140,6 +162,12 @@ Go to that link and choose the upload file and check your errors in the code-->
         </p>
         </figcaption>
     </figure>
+
+    <div></div><!--There is something like this-->
+    <span></span><!--These don't change or add anything in our code but we can use them while using CSS-->
+
+
+
 </body>
 
 </html>
