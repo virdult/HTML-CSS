@@ -56,6 +56,80 @@ Go to that link and choose the upload file and check your errors in the code-->
                     </p>
                 </details>
             </aside>
+            <br>
+            <table><!-- This looks like the one on WEB because of our CSS file btw! -->
+                <caption>My Daily Schedule</caption><!--Semantic-->
+                <thead><!--Semantic-->
+                    <tr>
+                        <th>
+                            &nbsp;<!--Empty-->
+                        </th>
+                        <th scope="col"><!--Table header. We put scope for semantics-->
+                            Time
+                        </th>
+                        <th scope="col">
+                            Activity
+                        </th>
+                    </tr>
+                </thead>
+                <tbody><!--Semantic-->
+                    <tr><!--Table row-->
+                        <th scope="row">Morning</th><!--head for row-->
+                        <td><!--Table data-->
+                            <time datetime="08:00">8 am</time>-<time datetime="11:00">11 am</time>
+                        </td>
+                        <td>
+                            Write code
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Break</th>
+                        <td>
+                            <time datetime="11:00">11 am</time>-<time datetime="14:00">2 pm</time>
+                        </td>
+                        <td>
+                            Eat lunch
+                        </td>
+                    </tr><!-- BRO YOU CAN SHIFT + ALT + PAGEDOWN(arrow) TO COPY AND PASTE IT BELOW INSTA! -->
+                    <tr>
+                        <th scope="row">Afternoon</th>
+                        <td>
+                            <time datetime="14:00">2 pm</time>-<time datetime="17:00">5 pm</time>
+                        </td>
+                        <td>
+                            Roam Around
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">This is the test part</th>
+                        <td colspan="2">
+                            This will take 2 columns.
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Test part 2</th>
+                        <td rowspan="2">
+                            This will take 2 rows.
+                        </td>
+                        <td>
+                            This will be at right up
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Test part 3</th>
+                        <td>
+                            This will be at right down
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">
+                            And that's what I do everyday.
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
         </section>
     </main>
     <hr>

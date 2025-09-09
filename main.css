@@ -1,5 +1,5 @@
 html {
-            font-size: 22px
+            font-size: 22px;
         }
 
         body {
@@ -8,13 +8,21 @@ html {
         }
 
         a {
-            color: aliceblue
+            color: aliceblue;
         }
 
         a:visited {
-            color: lightgray
+            color: lightgray;
         }
 
         a:hover, a:active {
-            color: #eee
+            color: #eee;
+        }
+
+        table, tr, th, td, caption {
+            border: 1px solid #eee;
+            font-family: 'Courier New', Courier, monospace;
+
+            border-collapse: collapse;
+            padding: 0.5rem;
         }
