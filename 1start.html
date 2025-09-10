@@ -28,6 +28,7 @@ Go to that link and choose the upload file and check your errors in the code-->
                 <li><a href="#Schedule">Daily Schedule</a></li>
                 <li><a href="#Personal">Personal Information</a></li>
                 <li><a href="#Lists">Lists</a></li>
+                <li><a href="#FormsInputs">Forms and Inputs</a></li>
             </ul>
         </nav><!--This is again, linking but in the same page, it sends you to the section.-->
     </header>
@@ -240,8 +241,109 @@ Go to that link and choose the upload file and check your errors in the code-->
     <div></div><!--There is something like this-->
     <span></span><!--These don't change or add anything in our code but we can use them while using CSS-->
 
+    <!--Forms&Inputs-->
+    <article id="FormsInputs">
+        <h2>Contact me</h2>
+        <p>I'd like to hear from you!</p>
 
-
+        <form action="https://httpbin.org/get" method="get"><!--you put get in the end of the normal link-->
+            <fieldset>
+                <legend>Personal Info</legend>
+            <p>
+                <label for="firstName">First Name: </label>
+                <input type="text" name="firstName" id="firstName" placeholder="Virdult" autocomplete="on" required autofocus>
+            </p><!--id gets the for from label; autocomplete remembers the things written there earlier
+                    required makes so that that place has to have something in it in order to submit
+                    autofocus makes page focus that place directly as soon as page loads. You should have just 1 in the whole page-->
+            <p>
+                <label for="lastName">Last Name: </label>
+                <input type="text" name="lastName" id="lastName" placeholder="Vir" autocomplete="on" required >
+            </p>
+            <p>
+                <label for="password">Password: </label>
+                <input type="password" name="password" id="password" placeholder="****" required >
+            </p>
+            <p>
+                <label for="PhoneNumber">Phone Number: </label>
+                <input type="tel" name="PhoneNumber" id="PhoneNumber" placeholder="555 555 5555" pattern="[0-9]{3} [0-9]{3} [0-9]{4}" required>
+            </p><!--Check the line up! type is different, also we have pattern-->
+            <p>
+                <label for="BirthYear">Birth Year: </label>
+                <input type="number" name="BirthYear" id="BirthYear" min="1900" max="2020" step="1" value="1990" required>
+            </p>
+            <p>
+                <label for="coffee">Favorite Coffee:</label>
+                <select name="coffee" id="coffee" size="5">
+                    <optgroup label="Coffees">
+                    <option value="regular coffee">Regular Coffee</option>
+                    <option value="iced coffee">Iced Coffee</option>
+                    </optgroup>
+                    <optgroup label="expresso drinks">
+                    <option value="latte" selected>Latte</option> 
+                    <option value="Cortado">Cortado</option>
+                    <option value="other">Others</option>
+                    </optgroup>  
+                </select>
+            </p>    
+            <!-- <p>
+                <label for="coffee">Favorite Coffee:</label>
+                <input type="text" name="coffee" id="coffee" list="coffee-list">
+                <datalist id="coffee-list">
+                    <option value="regular coffee"></option>
+                    <option value="iced coffee"></option>
+                    <option value="latte"></option> 
+                    <option value="Cortado"></option>
+                    <option value="other"></option>
+                </datalist>
+            </p> -->
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>What is your favorite food?</legend>
+                <p>
+                    <input type="radio" name="food" id="tacos" value="tacos"><!--I guess when you do type="radio" , only one of them is pickable-->
+                    <label for="tacos">Tacos</label>
+                </p>
+                <p>
+                    <input type="radio" name="food" id="doner" value="doner">
+                    <label for="doner">Doner</label>
+                </p>
+                <p>
+                    <input type="radio" name="food" id="kebab" value="kebab">
+                    <label for="kebab">Kebab</label>
+                </p>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Do you have pets?</legend>
+                <p>
+                    <input type="checkbox" name="pets" id="dog" value="dog">
+                    <label for="dog">Dog</label>
+                </p>
+                <p>
+                    <input type="checkbox" name="pets" id="cat" value="cat">
+                    <label for="cat">Cat</label>
+                </p>
+                <p>
+                    <input type="checkbox" name="pets" id="otherPet" value="otherPet"><!--You can't have same id more than once in 1 file so, for other, we use something spesific-->
+                    <label for="otherPet">Other</label>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Send me a note!</legend>
+                <label for="message">Your message:</label>
+                <br>
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Type your message here"></textarea>
+            </fieldset>
+            <br>
+            <button type="submit">Submit</button>
+            <button type="submit" formaction="https://httpbin.org/post" formmethod="post">Post</button>
+            <!--You want to send import informations with this instead of normal submitting. Normal submit is a git request
+            which writes your information on the link.-->
+            <button type="reset">Reset</button>
+        </form>
+    </article><!--There are more forms. Check for more if you need extras-->
 </body>
-
+        <!--Done with the tutorial. Make yourself some projects now I guess for 2-3 days to get used to this
+        Then go for CSS.-->
 </html>
